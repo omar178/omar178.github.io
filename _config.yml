@@ -10,7 +10,7 @@ email: omaraymanmar@gmail.com
 twitter_username: OmarAymanOmarTa
 github_username:  omar178
 linkedin_username: omar-ayman-6498529b
-disqus_username: omar-ayman-blog
+disqus_username: Omar Ayman
 name: Omar Ayman
 # Build settings
 markdown: kramdown
@@ -20,7 +20,7 @@ permalink: /:title/
 baseurl: ""
 
 # Your disqus shortname, entering this will enable commenting on posts
-disqus: omar-ayman-blog
+disqus: Omar Ayman
 
 avatar: https://avatars1.githubusercontent.com/u/31745935?s=400&u=5bc0b879a43e63687e69f9b5c42949b4719bdef3&v=4
 # html minify
