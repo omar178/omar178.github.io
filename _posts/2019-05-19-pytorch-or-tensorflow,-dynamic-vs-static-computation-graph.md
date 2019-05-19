@@ -4,7 +4,8 @@ title: "Pytorch or Tensorflow, Dynamic vs Static computation graph"
 date: 2019-05-19 05:37:36
 image: '/assets/img/'
 description:
-tags: machine learning
+tags:
+- Machine learning
 categories:
 twitter_text:
 ---
