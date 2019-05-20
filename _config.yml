@@ -20,7 +20,7 @@ permalink: /:title/
 baseurl: ""
 
 # Your disqus shortname, entering this will enable commenting on posts
-disqus: Omar Ayman
+disqus: omar178-github-io-1
 
 avatar: https://avatars1.githubusercontent.com/u/31745935?s=400&u=5bc0b879a43e63687e69f9b5c42949b4719bdef3&v=4
 # html minify
@@ -31,6 +31,13 @@ compress_html:
   profile: false
 
 # Links to include in menu navigation
+
+# Use the following plug-ins
+gems:
+  - jemoji # Emoji please!
+  - jekyll-sitemap # Create a sitemap using the official Jekyll sitemap gem
+
+
 # For external links add external: true
 links:
   - title: Home
@@ -42,5 +49,9 @@ links:
   - title: About Me
     url: /about
 
-# exclude my node related stuff
-exclude: ['package.json', 'src', 'node_modules']
+# exclude my node related stuff44
+exclude:
+    - Gemfile
+    - Gemfile.lock
+    - LICENSE
+    - README.md
