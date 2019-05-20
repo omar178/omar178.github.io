@@ -5,12 +5,12 @@ url: "https://omar178.github.io" # the base hostname & protocol for your site e.
 # User settings
 username: Omar Ayman
 user_description: Machine learning engineer and life-long learner
-user_title: Machine learning engineer and life-long learner
+user_title: Machine learning engineer
 email: omaraymanmar@gmail.com
 twitter_username: OmarAymanOmarTa
 github_username:  omar178
 linkedin_username: omar-ayman-6498529b
-disqus_username: Omar Ayman
+disqus_username: omar178-github-io-1
 name: Omar Ayman
 # Build settings
 markdown: kramdown
@@ -42,8 +42,8 @@ gems:
 links:
   - title: Home
     url: /
-  - title: Series
-    url: /series
+  # - title: Series
+  #   url: /series
   - title: Tags
     url: /tags
   - title: About Me
