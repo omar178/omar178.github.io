@@ -22,6 +22,7 @@ treats α i as a learnable parameter
 # Logistic Sigmoid and Hyperbolic tangent
     g ( z ) = σ ( z )
     g ( z ) = tanh( z )
+
 they are closely related because tanh(z) = 2 σ (2 z ) − 1
 sigmoidal
 units saturate across most of their domain—they saturate to a high value when
