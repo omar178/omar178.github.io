@@ -24,13 +24,13 @@ That could be an issue in Gradient descent so you will have to run through all y
 
 Solution?!
 
-Stochastic Gradient Descent
+## Stochastic Gradient Descent
 
-    The case in SGD is that instead of running through all the data which is definitely could be large we will take only a small batch ,may be 64, 128 and approximate the sum of data to update to any direction.but !
+The case in SGD is that instead of running through all the data which is definitely could be large we will take only a small batch ,may be 64, 128 and approximate the sum of data to update to any direction.but !
 
 Problem 1
 
-    if you think of it as long as you are moving horizontally your loss will update slowly as your target is to go just as quickly as possible to the smiling face at the center but at the same time if vertically your loss will update quickly so that could be a problem when choosing SGD as our optimization algorithm
+if you think of it as long as you are moving horizontally your loss will update slowly as your target is to go just as quickly as possible to the smiling face at the center but at the same time if vertically your loss will update quickly so that could be a problem when choosing SGD as our optimization algorithm
 
 or what if it reaches a local minima or a saddle point as you can the slope is near to zero so our loss wouldn’t update at all so it stuck!! could be a problem ?
 ## SGD with momentum

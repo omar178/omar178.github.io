@@ -32,7 +32,7 @@ a	b	c		a	b	c
 
 The median is at (12,32,15). Dividing Table 1 into two parts at the median gives us two tables, Table 2 and Table 3 as below. Next, from among the remaining (two) attributes, we select that dimension that has the greatest variance. This dimension is ‘c’. Again, we sort the two tables on this dimension and then break them at the respective medians.
 
-          Break Table 1 on median (12,32,15)						
+Break Table 1 on median (12,32,15)						
         >			       <
      Table 2			     Table 3		
 a	b	c		a	b	c

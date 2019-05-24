@@ -33,8 +33,8 @@ An obvious thing to know is that the graph once defined it can be used multiple 
 
 ## Disadvantages
 
-    Different input size could be a problem so for example if your inputs are not restricted to 16*16 , it will be more difficult to define a single structure of identical computations.
-    Variably structured inputs/outputs: A more complicated case is when each input has not only a different size, but also a different structure for example your data may be has images,texts and structured tables.
+Different input size could be a problem so for example if your inputs are not restricted to 16*16 , it will be more difficult to define a single structure of identical computations.
+Variably structured inputs/outputs: A more complicated case is when each input has not only a different size, but also a different structure for example your data may be has images,texts and structured tables.
 
 However these difficulties we can avoid if we can declare a graph with unspecified size of input at declaration time and let the graph cope with the inputs as TensorFlow offers the dynamic rnn operation. While it is therefore possible to deal with variable architectures with static declaration in principle, it still poses some difficulties in practice:
 
