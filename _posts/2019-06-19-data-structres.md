@@ -83,14 +83,14 @@ Operations on Circular Queue:
 More generally, we cannot efficiently delete an arbitrary node from an interior position of the list if only given a reference to that node, because we cannot determine the node that immediately precedes the node to be deleted.
 To provide greater symmetry, we define a linked list in which each node keeps an explicit reference to the node before it and a reference to the node after it. Such a structure is known as a doubly linked list. These lists allow a greater variety of
 O(1)-time update operations, including insertions and deletions at arbitrary positions within the list.
-![alt text](/home/omar/omar178.github.io/assets/img/linked_list.png)
+![](/home/omar/omar178.github.io/assets/img/linked_list.png)
 A doubly linked list representing the sequence { JFK, PVD, SFO },using sentinels header and trailer to demarcate the ends of the list.
 ### Inserting and deleting a nodes
 Every insertion into our doubly linked list representation will take place between
 a pair of existing nodes, as diagrammed in Figure 7.11. For example, when a new
 element is inserted at the front of the sequence, we will simply add the new node
 between the header and the node that is currently after the header.
-![alt text](/home/omar/omar178.github.io/assets/img/linked_list1.png)
+![](/home/omar/omar178.github.io/assets/img/linked_list1.png)
 ### Advantages of Array-Based Sequences
 • Arrays provide O(1)-time access to an element based on an integer index.
 The ability to access the k th element for any k in O(1) time is a hallmark
