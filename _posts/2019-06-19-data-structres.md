@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Post Data structres"
+title: "Data structres"
 date: 2019-06-19 23:45:50
 image: '/assets/img/'
 description:
