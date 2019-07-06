@@ -34,10 +34,10 @@ I will add the real equation for the n-gram model to give a better intuition abo
 ![](/assets/img/n-grams.png)
 The intuition of the n-gram model is that instead of computing the probability ofa word given its entire history, we can approximate the history by just the last few words.
 ## bigram
-The bigram model, for example, approximates the probability of a word given bigram all the previous wordsP(wn|wn−11)by using only the conditional probability of the preceding word P(wn|wn−1). In other words, instead of computing the probability
+The bigram model, for example, approximates the probability of a word given bigram all the previous wordsP(wn|wn−1)by using only the conditional probability of the preceding word P(wn|wn−1). In other words, instead of computing the probability
   P(the|Walden Pond’s water is so transparent that)
 we approximate it with the probability P(the|that),When we use a bigram model to predict the conditional probability of the next word, we are thus making the following approximation:
-  P(wn|wn−11)≈P(wn|wn-1)
+  P(wn|wn−1)≈P(wn|wn-1)
 p.s bigram models follows Markov assumption which assume that a word at time t depends only on word at time t-1
 p.s trigram follows the same rule they just look two words in the past  
 so general equation for n-grams is:
@@ -58,5 +58,23 @@ A problem that might arise using n-grams models is that if we split or data into
 the simplest way out there is to just add one to all the words counts before normalization so words with 0 counts will be 1 and so on, so equation becomes as follows
 ![](/assets/img/equ2.png)
 where c is the counts for each word and as you can we increment the values by 1 and then adding V to the denominator
+### Backoff
+Another way to solve the problem is when trying to predict a new word
+let's say we are trying to assume whether to predict or not a word "sam"(W) having the knowledge that the previous words are "play","nicely" so this should be considered as a trigram model so the next step is we will look for the probability that the next word is "Sam" so what basically the model will do is that it will look in our table of counts for this sequence and see it's weight to decide whether or not to predict next word as "Sam" and boom this sequence is not found and the count is zero so what Backoff is achieving that it tries to look for counts for bigram "nicely Sam" and if not found it tries again to search for the count of word "sam" only so in other words instead of only searching for Wn,Wn-1,Wn-2 counts this will break down searching into 3 pieces!. This actually will generalize perfectly since it will have less constraints to the context.
+### Interpolation
+instead of breaking down the count weights Interpolation will take the sum of all counts weights and will assign lambda parameter to each one of them :
+  P(wn|wn−2wn−1) =λ1P(wn|wn−2wn−1)+λ2P(wn|wn−1)+λ3P(wn)
+all lambda sum to 1 and the actual value for each lambda is determined by another corpus dataset
+
+### Kneser-Ney discounting
+Copying Prof.Jurafsky description on this topic.
+Consider the job of predicting the next word in this sentence, assuming we are interpolating a bigram and a unigram model.I can’t see without my reading................................The word glasses seems much more likely to follow here than,  say,  the word Kong, so we’d like our unigram model to prefer glasses. But in fact it’s Kongt hat is more common, since HongKong is a very frequent word. A standard unigram model will assign Kong a higher probability than glasses.  We would like to capture the intuition that although Kong is frequent, it is mainly only frequent in the phrase HongKong, that is, after the word Hong. The word glasses has a much wider distribution.In  other  words,  instead  of P(w),  which  answers  the  question  “How  likely  is w?”, we’d like to create a unigram model that we might call PCONTINUATION, which answers the question “How likely is wt o appear as a novel continuation?”. How can we estimate this probability of seeing the word was a novel continuation, in a new unseen context? The Kneser-Ney intuition is to base our estimate of PCONTINUATION on the number of different contexts word w has appeared in, that is, the number of bigram types it completes. Every bigram type was a novel continuation the first time it was seen.  We hypothesize that words that have appeared in more contexts in the past are more likely to appear in some new context as well.  The number of times a word w appears as a novel continuation can be expressed as:
+  PCONTINUATION(w)∝|{v:C(vw)>0}|
+  where w is the word we need to predict and v is the preceding word
+To  turn  this  count  into  a  probability,  we  normalize  by  the  total  number  of  word bigram types. In summary:
+![](/assets/img/kneser_equ.png)
+
+
+
 # References
-https://web.stanford.edu/~jurafsky 
+https://web.stanford.edu/~jurafsky
